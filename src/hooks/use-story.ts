@@ -11,7 +11,7 @@ export function useStory() {
  const ctx=gsap.context(()=>{
  mm.add('(prefers-reduced-motion: no-preference)',()=>{
  const targets=Array.from(root.querySelectorAll<HTMLElement>('[data-reveal], .page-title > *, .intro h2, .intro .body-copy, .contact-layout > div, .contact-form > label, .contact-form > button, .gallery-grid img, .enquiry-circle'));
- targets.filter(el=>!el.parentElement?.closest('[data-reveal]')).forEach((el,i)=>gsap.from(el,{y:55,autoAlpha:0,duration:1.2,delay:(i%3)*.07,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 94%',once:true}}));
+ targets.filter(el=>!el.parentElement?.closest('[data-reveal]')).forEach((el,i)=>gsap.from(el,{y:55,opacity:0,duration:1.2,delay:(i%3)*.07,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 94%',once:true}}));
  const entry=root.querySelector('.hero-copy, .cover-copy');
  if(entry)gsap.from(entry.children,{y:45,autoAlpha:0,stagger:.13,duration:1.35,ease:'power3.out'});
  gsap.utils.toArray<HTMLElement>('.project-image, .page-photo').forEach(image=>gsap.from(image,{clipPath:'inset(12% 0 12% 0)',duration:1.5,ease:'power3.inOut',scrollTrigger:{trigger:image,start:'top 92%',once:true}}));
