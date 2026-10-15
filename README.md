@@ -1,14 +1,18 @@
-# Welcome to your Lovable project
+# Cinematic Portfolio Scroll
+
+i want to make an website for an interior design studio , a fully immersive scroll triggered animated story tell website which gives user a detailed movie like expirience as he scrolls it should be responsive and mobile friendly showcasing my work , services , contact form anbd also other nessarry sections which will be required for a website
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://cinematic-portfolio-scroll.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/8cf537a9-0632-4bd8-98e8-623b43a58fd9).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +24,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
