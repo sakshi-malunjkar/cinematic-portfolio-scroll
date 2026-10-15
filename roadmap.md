@@ -5,5 +5,5 @@
 - [x] Desktop/mobile interaction checks and routing tests
 - [x] Replace static storytelling with immersive scroll-driven scenes
 - [x] Verify scene transitions, mobile scrolling, and reduced motion
-- [ ] Add layered stacking and scroll reveals throughout
-- [ ] Verify animated navigation and reduced-motion fallbacks
+- [x] Add layered stacking and scroll reveals throughout
+- [x] Verify animated navigation and reduced-motion fallbacks
