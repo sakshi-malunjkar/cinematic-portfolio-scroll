@@ -26,7 +26,7 @@ html { scroll-behavior:smooth; }
 .wordmark { font-size:27px; font-weight:500; display:flex; align-items:baseline; gap:9px; }
 .wordmark span { font-size:14px; font-weight:400; }
 .desktop-nav { display:flex; gap:32px; align-items:center; font-size:16px; font-weight:500; }
-.desktop-nav a { min-height:44px; display:inline-flex; align-items:center; }
+.desktop-nav a { min-height:44px; display:inline-flex; align-items:center; font-size:16px; }
 .site-header a:focus-visible { outline:2px solid var(--primary); outline-offset:5px; }
 .nav-item { position:relative; padding:8px 0; }
 .nav-item::after { content:''; position:absolute; bottom:0; left:0; width:0; height:1px; background:currentColor; transition:width .3s; }
