@@ -1,24 +1,13 @@
-import { createFileRoute } from "@tanstack/react-router";
-
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
-  component: Index,
-});
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+import {createFileRoute,Link} from '@tanstack/react-router';
+import {ArrowUpRight} from 'lucide-react';
+import {opening,projects,pageHead} from '@/lib/portfolio';
+import {useStory} from '@/hooks/use-story';
+import {ProjectCard,ServiceList,EnquiryBand,Process} from '@/components/studio';
+export const Route=createFileRoute('/')({head:()=>pageHead('Interior design, thoughtfully composed','FORME Studio creates considered interiors for meaningful living. Discover a cinematic collection of residential, commercial, and styled spaces.'),component:Index});
+function Index(){const ref=useStory();return <main ref={ref}>
+<section className="hero"><img className="hero-image" src={opening} alt="Sculptural living room opening onto a sunlit garden" width={1920} height={1088} fetchPriority="high"/><div className="hero-copy"><p className="hero-kicker">Interior design · Architecture · Curation</p><h1>FORME Studio.</h1><p className="hero-tagline">Spaces for <em>living well.</em></p><Link to="/work" className="text-link mt-8">Explore our work <ArrowUpRight size={16}/></Link></div><div className="hero-bottom"><p>Thoughtfully composed.<br/>Deeply personal.</p><a href="#introduction" className="scroll-cue" aria-label="Scroll to studio introduction"><span>SCROLL TO DISCOVER</span><span className="scroll-line"/></a><p className="caption">A study in quiet living<br/>Residential concept · 01 / 03</p></div></section>
+<section id="introduction" className="section intro"><p className="eyebrow" data-reveal>01 — The studio</p><div className="intro-copy"><h2 className="section-heading" data-reveal>Good design isn’t just seen.<br/>It’s <em>felt.</em></h2><div className="mt-7 flex flex-col gap-7" data-reveal><p className="body-copy">We create spaces with a sense of belonging. Where architecture, materials, and everyday life come together in quiet harmony. Considered in every detail. Individual by nature.</p><Link to="/studio" className="text-link self-start">Meet the studio <ArrowUpRight size={16}/></Link></div></div></section>
+<section className="section bg-secondary"><div className="section-top"><div data-reveal><p className="eyebrow mb-5">02 — Selected work</p><h2 className="section-heading">A sense of <em>place.</em></h2></div><Link to="/work" className="text-link">All projects <ArrowUpRight size={16}/></Link></div><div className="project-grid">{projects.map((p,i)=><ProjectCard key={p.slug} project={p} index={i}/>)}</div><p className="mt-10 text-[10px] text-muted-foreground">An exploration of spaces. All projects shown are generated design concepts.</p></section>
+<section className="manifesto" data-scene><img src={projects[2].image} alt={projects[2].alt} width={1536} height={1024} loading="lazy"/><div className="manifesto-copy"><p className="eyebrow justify-center">Our point of view</p><h2>Less, but <em>better.</em><br/>Spaces with soul.</h2><p className="text-xs leading-7">Honest materials. Thoughtful proportions.<br/>Beauty that feels as natural as the way you live.</p></div></section>
+<section className="section services-grid"><div data-reveal><p className="eyebrow mb-6">03 — What we do</p><h2 className="section-heading">Your vision.<br/>Our <em>perspective.</em></h2><Link to="/services" className="text-link mt-8">Our services <ArrowUpRight size={16}/></Link></div><ServiceList/></section><Process/><EnquiryBand/>
+</main>;}

@@ -8,3 +8,10 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Studio architecture
+- Keep shared navigation and footer in the root layout; content pages own unique metadata so all public sections remain independently addressable.
+- Keep concept portfolio records in a browser-safe shared module; identify sample work rather than implying completed commissions.
+- Load GSAP and ScrollTrigger after hydration with scoped cleanup and reduced-motion/mobile branches to preserve SSR and ordinary scrolling.
+- Enquiries use a schema-validated public server function with insert-only privileged access to a private RLS table; never expose visitor read access or return submitted personal data.
+- Keep all visual colors and image overlays in semantic global design tokens so presentation remains consistent.

@@ -1,0 +1,2 @@
+import {z} from 'zod';
+export const enquirySchema=z.object({name:z.string().trim().min(2,'Please enter your name.').max(100),email:z.string().trim().email('Please enter a valid email.').max(255),project_type:z.enum(['Residential','Commercial','Styling','Other']),message:z.string().trim().min(10,'Please tell us a little more (at least 10 characters).').max(3000),website:z.string().max(0,'Unable to submit this enquiry.')});
