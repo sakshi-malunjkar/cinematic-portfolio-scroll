@@ -45,8 +45,8 @@ export function useStory() {
  if(image) gsap.fromTo(image,{yPercent:-5,scale:1.08},{yPercent:5,scale:1,ease:'none',scrollTrigger:{trigger:el,start:'top bottom',end:'bottom top',scrub:1}});
  gsap.to(el.querySelector('.manifesto-copy'),{y:-35,ease:'none',scrollTrigger:{trigger:el,start:'top top',end:'+=240',pin:true,scrub:1}});
  });
- return()=>{sequences.forEach(sequence=>sequence.classList.remove('is-enhanced'));};
  });
+ return()=>{sequences.forEach(sequence=>sequence.classList.remove('is-enhanced'));};
  });
  },ref.current);
  cleanup=()=>{mm.revert();ctx.revert();};
