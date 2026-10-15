@@ -1,5 +1,5 @@
 # Studio website
-- [ ] Editorial design system and cinematic home
-- [ ] Work, project details, studio, services, and contact pages
-- [ ] Secure enquiries or honest unavailable state if Cloud is declined
-- [ ] Desktop/mobile interaction checks and routing tests
+- [x] Editorial design system and cinematic home
+- [x] Work, project details, studio, services, and contact pages
+- [x] Secure enquiries with validated private storage
+- [x] Desktop/mobile interaction checks and routing tests
